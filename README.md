@@ -99,6 +99,9 @@ The final step involved integrating the data with a BI tool to visualize and gen
 - **Power BI Integration:**
    - Connected Power BI to Azure Synapse Analytics.
    - Designed dashboards and reports to present actionable insights to stakeholders.
+ 
+     ![image](https://github.com/user-attachments/assets/a195d455-5889-4042-b144-bfe89f4260ee)
+
 
 ---
 
