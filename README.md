@@ -20,6 +20,8 @@ To start, the following Azure resources were provisioned:
 - **Azure Synapse Analytics:** Handles data warehousing for BI use.
 
 All resources were configured with proper Identity and Access Management (IAM) roles to ensure seamless integration and security.
+![image](https://github.com/user-attachments/assets/0905a006-6a76-43cb-b007-4c1fe05b6e5e)
+
 
 ---
 
@@ -30,8 +32,14 @@ All resources were configured with proper Identity and Access Management (IAM) r
 1. **Dynamic Copy Activity:**
    - ADF pulls data from GitHub using an HTTP connector and stores it in the bronze container in Azure Storage.
    - Parameters were added to the pipeline for adaptability to changes in the data source.
+  
+     ![image](https://github.com/user-attachments/assets/39e3d1b1-1275-4224-aaf4-c3753c50f564)
+
 
 The raw data is now securely stored and ready for transformation.
+
+![image](https://github.com/user-attachments/assets/aba16642-7e6b-4f06-b73d-0f37f41d7427)
+
 
 ---
 
@@ -43,11 +51,20 @@ Using Azure Databricks, the raw data from the bronze container was transformed i
 - **Cluster Setup:** A Databricks cluster was created to process the data efficiently.
 - **Data Lake Integration:** Databricks connected to Azure Storage to access the raw data.
 
+  ![image](https://github.com/user-attachments/assets/787233bd-acb1-47c8-84d6-308fe568eac2)
+
+
 #### Transformations:
 - Normalized date formats for consistency.
 - Cleaned and filtered invalid or incomplete records.
 - Grouped and concatenated data to make it more usable for analysis.
 - Saved the transformed data in the silver container in Parquet format for optimal storage and query performance.
+
+  ![image](https://github.com/user-attachments/assets/03c972ff-6228-4880-9e17-bbbf14e19cb7)
+
+  ![image](https://github.com/user-attachments/assets/f1554d56-0276-4bcb-8a72-f8514051c835)
+
+
 
 ---
 
@@ -61,8 +78,17 @@ Azure Synapse Analytics structured the processed data for analysis and BI report
 3. **Database and Schema Creation:**
    - Created SQL databases and schemas to organize data.
    - Defined external tables and views for BI consumption.
+  
+     ![image](https://github.com/user-attachments/assets/9d82f4ca-5d2b-42ae-9da2-bd64948f70b5)
+
+     ![image](https://github.com/user-attachments/assets/ce425f1d-dcd9-4b99-85d1-acbbc9e50d82)
+
+
 
 The cleaned, structured data was then moved to the gold container for reporting purposes.
+
+![image](https://github.com/user-attachments/assets/30a49adb-1e3b-4198-9f33-7d70e0a94d83)
+
 
 ---
 
